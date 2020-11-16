@@ -1,0 +1,128 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0; 
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "gayathri";
+}
+
+/* Background */
+.background {
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to left, #c5d5cb,#e3e0cf);
+    z-index:-1;
+}
+
+/*Header */
+nav {
+    display: grid;
+    grid-template-columns: 10% 1fr 1fr 10%;
+    min-height:12vh;
+    color:whitesmoke;
+    align-items: center;
+}
+
+#logo {
+    font-family: "gayathri";
+    color: gray;
+    grid-column: 2/3;
+    font-size:24px;
+}
+
+.icone {
+    cursor: pointer;
+    justify-self: end;
+    width: 40px;
+}
+
+section {
+    display: flex;
+    height: 80vh;
+    justify-content: center;
+    align-items: center;
+
+}
+.banniere {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    img::after{
+        content:"";
+        background: black;
+        width: 100%;
+        height: 100%;
+        position:absolute;
+        left:0;
+        top:0;
+        opacity: 0.3;
+    }
+}
+
+.lettres {
+    margin:0;
+    padding:0;
+    letter-spacing: -25px;
+}
+.titre {
+    position:absolute;
+    top:70%;
+    left:10%;
+    font-size: 100px;
+    transform: translate(-20%, -70%);
+    color:whitesmoke;
+    z-index: 3;
+}
+
+/* NAV */
+.overlay{
+    height: 100%;
+    width: 300px;
+    position: fixed;
+    z-index: 10;
+    right: -300px;
+    top:0;
+    background: black;
+    overflow-x: hidden;
+    .closeBtn {
+        position: absolute;
+        top:20px;
+        right: 45px;
+        font-size:60px;
+    }
+    a {
+        display: flex;
+        justify-content: center;
+        padding:8px;
+        text-decoration: none;
+        font-size:36px;
+        color:#818181;
+        transition:0.3s;
+        &:hover{
+            color:white;
+        }
+    }
+
+}
+
+.overlay-content {
+    position: relative;
+    top:30%;
+    width: 100%;
+    text-align: center;
+}
+
+footer p {
+    text-align: center;
+}
